@@ -64,7 +64,7 @@ for ( let k = 0; k < arreglo.length-1; k++ ) {
     } 
 }
 console.log(resul);
-*/
+
 //ejemplo 7
 let palabra1: string = "aabcc";
 let palabra2: string = "adcaa";
@@ -79,3 +79,18 @@ for ( let i =  1; i <= palabra1.length; i++) {
 }
 console.log("tiene " + cont + " palabras repetidas");
 //console.log(palabra1.length);
+*/
+//ejercicio 8
+let  limite: number = 6;
+let cont: number;
+let acu: string = "";
+for (let i = 1; i <= (limite*2)+1; i++) {
+    cont = 0;
+    for (let j = 1; j <= i; j++) {
+        if ( i % j == 0) 
+            cont++;    
+    }
+    if (cont == 2)
+       acu = acu + +i;
+}
+console.log(acu);
