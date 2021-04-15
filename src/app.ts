@@ -79,7 +79,7 @@ for ( let i =  1; i <= palabra1.length; i++) {
 }
 console.log("tiene " + cont + " palabras repetidas");
 //console.log(palabra1.length);
-*/
+
 //ejercicio 8
 let  limite: number = 6;
 let cont: number;
@@ -94,3 +94,58 @@ for (let i = 1; i <= (limite*2)+1; i++) {
        acu = acu + +i;
 }
 console.log(acu);
+
+// ejemplo 9 
+let nombres: string = "ku ko da";
+let cont: number = 0;
+
+for ( let i = 0; i <= nombres.length-1; i++) {
+    if ( nombres.charAt(i) != " " ){
+        for ( let j = 0; j <= nombres.length-1; j++) {
+            if( nombres.charAt(j) != " " && nombres.charAt(i) == nombres.charAt(j) && nombres.charAt(j-1) == " " ) {
+                    cont = cont + 1;
+            }
+        }
+    }
+}
+console.log(cont);
+console.log(nombres.length-1);
+*/
+// problema 10
+let ip: string = "172.31.255.254";
+let valor: string ="";
+let nro2: number;
+let nro: string = "";
+let sum: number = 0;
+let final: string = ip.charAt(ip.length);
+let c: number = 1;
+for (let i = 0; i <= ip.length; i++) {
+    if (ip.charAt(i) != "." && i <= ip.length-1) {       
+        valor = valor.concat(ip.charAt(i));    
+    }  
+    else if(ip.charAt(i) === "." || final != "." ) {
+        nro = valor.toString();
+        nro2 = parseInt(nro);
+        //  B: 172.16.0.1 a 172.31.255.254   <----
+        if (nro2 == 172 && c == 1){
+            sum = sum + 1;
+            c = c+1; 
+        }else if (nro2 >= 16 && nro2 <= 31 && c==2){
+            sum = sum + 1;
+            c = c+1; 
+        }else if (nro2 >= 0 && nro2 <= 255 && c==3){
+            sum = sum + 1;
+            c = c+1; 
+        }else if (nro2 >= 1 && nro2 <= 254 && c==4){
+            sum = sum + 1;
+            c = c+1; 
+        }
+        valor ="";
+        // console.log(nro);    
+    }   
+}
+//console.log(sum); 
+if (sum == 4) 
+    console.log(true);
+else
+    console.log(false);
