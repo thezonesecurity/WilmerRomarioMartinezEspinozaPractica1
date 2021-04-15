@@ -36,7 +36,7 @@ if ( cadena == cadenaInvertido) {
 } else {
     console.log( false );
 }
-*/
+
 //ejercicio 5
 let arreglo: Array<number> = [6, 2, 3, 8];
 let aux: number;
@@ -64,3 +64,18 @@ for ( let k = 0; k < arreglo.length-1; k++ ) {
     } 
 }
 console.log(resul);
+*/
+//ejemplo 7
+let palabra1: string = "aabcc";
+let palabra2: string = "adcaa";
+let cont: number = 0;
+for ( let i =  1; i <= palabra1.length; i++) {
+    for ( let j = 1; j <= palabra2.length; j++) {
+        if( palabra1[i] == palabra2[j]) {
+            cont = cont + 1;
+            break;
+        }
+    }
+}
+console.log("tiene " + cont + " palabras repetidas");
+//console.log(palabra1.length);
