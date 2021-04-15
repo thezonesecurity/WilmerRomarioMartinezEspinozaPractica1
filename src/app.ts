@@ -1,3 +1,4 @@
+/*
 //ejercicio  1
 let nro: number = 5;
 let i: number = 1;
@@ -15,3 +16,11 @@ if ( cont == 2 ) {
 } else {
     console.log( false );
 }
+*/
+// ejercicio 2 
+let texto: string = "this is a sample string";
+let textoInvertido: string = "";
+for ( let  j = texto.length-1; j >= 0; j--) {
+    textoInvertido = textoInvertido + texto.charAt( j );
+}
+console.log( textoInvertido );
